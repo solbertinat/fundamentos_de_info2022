@@ -63,10 +63,10 @@
 
 #6 - Creá una lista e inicializala con 5 cadenas de caracteres leídas por teclado. Copiá los elementos de la 
 # lista en otra lista pero en orden inverso, imprimí los elementos de esta última lista.
-#lista = [input(), input(), input(), input(), input()] 
-#lista_inversa = (lista[4], lista[3], lista[2], lista[1], lista[0])         
-#print(lista_inversa)
-"CHEQUEAR"
+# lista = [input(), input(), input(), input(), input()] 
+# lista_inversa = [lista[4], lista[3], lista[2], lista[1], lista[0]]         
+# print(lista_inversa)
+
 
 #7 - Creá un programa que declare una lista y la vaya llenando de números leídos por teclado hasta que se 
 # introduzca un número negativo. Una vez hecho esto se deben imprimir los elementos de la lista.
@@ -109,22 +109,6 @@ print(dic.values)
 # de cada carácter en la cadena (considerar que las mayúsculas difieren de las minúsculas, por lo que, 
 # si el string es "Agua", el carácter "A" tiene 1 aparición y el carácter "a" también tiene 1).
 ''''cadena = "Aguacate"
-for posicion in range(len(cadena)):             
-    contador = 0            
-    caracter = cadena[posicion]
-    posicion =+ 1
-    if posicion == len(cadena):
-        break
-    for pos in cadena:
-        if caracter == cadena[pos]:
-            contador =+ 1
-        pos =+ 1
-        if pos == len(cadena):
-            break
-    dic = {caracter : contador}
-print(dic)'''
-
-''''cadena = "Aguacate"
 freq = {}
 for caracter in cadena: 
     if caracter not in freq:
@@ -135,7 +119,7 @@ print(freq)'''
 #11 - Modificá el programa anterior para que además imprima los caracteres que no aparecen en la cadena, 
 # pero con el valor 0.
 # cadena = "Aguacate"
-# freq = {"A" : 0, "B" : 0 }
+# freq = {"A" : 0, "B" : 0, "C" : 0, "D" : 0, "E" : 0, "F" : 0, "G" : 0, "H" : 0, "I" : 0, "J" : 0, "K" : 0, "L" : 0, "M" : 0, "N" : 0, "O" : 0, "P" : 0, "Q" : 0, "R" : 0, "S" : 0, "T" : 0, "U" : 0, "V" : 0, "W" : 0, "X" : 0, "Y" : 0, "Z" : 0, "a" : 0, "b" : 0, "c" : 0, "d" : 0, "e" : 0, "f" : 0, "g" : 0, "h" : 0, "i" : 0, "j" : 0, "k" : 0, "l" : 0, "m" : 0, "n" : 0, "o" : 0, "p" : 0, "q" : 0, "r" : 0, "s" : 0, "t" : 0, "u" : 0, "v" : 0, "w" : 0, "x" : 0, "y" : 0, "z" : 0, "0" : 0, "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0, "7" : 0, "8" : 0, "9" : 0}
 # for caracter in cadena: 
 #     freq[caracter] += 1
 # print(freq)
@@ -148,9 +132,7 @@ print(freq)'''
 # y la nota media obtenida por cada uno de ellos. Nota: si se introduce el nombre de un alumno que ya existe
 #  el programa tiene que dar un error.
 
-''''from audioop import avg
-
-dic = {}
+''''dic = {}
 cant_alumnos = int(input("ingrese el numero de alumnos que desea ingresar: "))
 while cant_alumnos > 0:
     cant_alumnos -= 1
@@ -170,19 +152,18 @@ print(lista_final)'''
 
 #13 - Creá un programa que pida dos número enteros 
 # al usuario y diga si alguno de ellos es múltiplo del otro creando la función esMultiplo.
-'''n1 = int(input("ingrese un numero entero: "))
-n2 = int(input('ingrese otro numero entero: '))
+# n1 = int(input("ingrese un numero entero: "))
+# n2 = int(input('ingrese otro numero entero: '))
 
-def esMultiplo(n1, n2):
-    if (n1%n2 == n1/n2):
-        print(n2 + "es múltiplo de " + n1)
-    if (n2%n1 == n2/n1):
-        print(n1 + "es múltiplo de " + n2)
-    if ((n1%n2 != n1/n2) and (n2%n1 != n2/n1)):
-        print("Los números ingresados no son múltiplos entre sí")'''
+# def esMultiplo(n1, n2):
+#     if (n1%n2 == 0):
+#         print(str(n2) + " es múltiplo de " + str(n1))
+#     if (n2%n1 == 0):
+#         print(str(n1) + " es múltiplo de " + str(n2))
+#     if ((n2%n1 != 0) and (n1%n2 != 0)):
+#         print("Los números ingresados no son múltiplos entre sí")
 
-#CHEQUEAR
-
+# esMultiplo(n1, n2)
 
 #14 - Creá una función que calcule la temperatura media de un día a partir de la temperatura máxima y mínima. 
 # Escribí un programa principal, que utilizando la función anterior, vaya pidiendo la temperatura máxima y 
