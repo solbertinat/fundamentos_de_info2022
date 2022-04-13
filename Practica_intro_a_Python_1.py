@@ -34,7 +34,17 @@
 #7 - Un comerciante, el cual tiene un sueldo base, recibe un 10% extra por comisión por cada 
 # venta que realiza. Realizar un programa que devuelva el dinero que recibirá por comisión luego 
 # de 4 ventas y el total de dinero que ganará ese mes, teniendo en cuenta estas ventas y su sueldo base.
-"falta"
+def dinero_fin_mes(sueldo_base, n):
+    comision = (sueldo_base*0.1)
+    contador = 0
+    dinero_ventas = 0
+    while contador < n:
+        dinero_ventas = dinero_ventas + comision
+        contador += 1
+    print("total dinero por comisiones: $" + str(dinero_ventas))
+    print("total dinero ganado en el mes: $" + str((dinero_ventas + sueldo_base)))
+    
+dinero_fin_mes(100, 4)
 
 #8 - Escribir un programa para calcular la nota final de un estudiante, teniendo en cuenta que por cada 
 # respuesta correcta el estudiante suma 4 puntos, por cada incorrecta se le resta 1 punto y si la respuesta 
