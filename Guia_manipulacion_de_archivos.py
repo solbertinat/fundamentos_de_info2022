@@ -58,7 +58,15 @@ no_p(r"no_p.txt")'''
 # remp_y_crear(r"archivo.txt", r"nuevo_archivo.txt")            
 
 #6 - Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
+def elimina_saltos(archivo, nuevo_archivo):
+    with open(archivo, 'r') as mi_archivo:
+        for linea in mi_archivo:
+            contador = 0
+            while contador < len(linea):
+                with open(nuevo_archivo, 'w') as nuevo:
+                    nuevo.write("\n"+linea)
 
+elimina_saltos(r"archivo_2.txt", r"nuevo_archivo.txt")
 
 #7 - Escribí un porgrama que lea un archivo e identifique la palabra más larga, la cual debe imprimir y decir 
 # cuantos caracteres tiene.
