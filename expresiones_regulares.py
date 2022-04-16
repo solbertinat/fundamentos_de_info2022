@@ -1,26 +1,105 @@
 #1 - Escribí un programa que verifique si un string tiene al menos un carácter permitido. 
 # Estos caracteres son a-z, A-Z y 0-9.
+# import re
+# string = input("Ingrese una cadena de caracteres:")
+# patron = "[a-zA-Z0-9]"
+
+# if re.search(patron, string) is not None:
+#     print("hay al menos un caracter permitido")
+# else:
+#     print("no hay caracteres permititdos")
 
 #2 - Escribí un programa que verifique si un string tiene todos sus caracteres permitidos. 
 # Estos caracteres son a-z, A-Z y 0-9.
+# import re
+# string = input("Ingrese una cadena de caracteres:")
+# patron = "[a-zA-Z0-9]"
+
+# if (len(string) == len(re.findall(patron, string))):
+#     print("todos los caracteres son pemritidos")
+# else:
+#     print("al menos un caracter no es permitido")
 
 #3 - Creá un programa que verifique las siguientes condiciones:
 #       si un string dado tiene una h seguida de ninguna o más e.
 #       si un string dado tiene una h seguida de una o más e.
-#       si un string dado tiene una h seguida de una o más e.
 #       si un string dado tiene una h seguida de dos o tres e.
+""""no funciona"""
+# import re
+# string = input("ingrese una cadena de caracteres: ")
+
+# patron1 = "(h(e*))"     #0 o mas coincidencias
+# if re.search(patron1, string) is not None:
+#     print("se cumple la condicion 1")
+# else:
+#     print("no se cumple la condicion 1")
+
+# patron2 = "(h(e+))"     #una o mas ocurrencias
+# if re.search(patron2, string) is not None:
+#     print("se cumple la condicion 2")
+# else:
+#     print("no se cumple la condicion 2")
+
+# patron3 = "(h(e{2,3}))"     #dos o tres veces
+# if re.search(patron3, string) is not None:
+#     print("se cumple la condicion 3")
+# else:
+#     print("no se cumple la condicion 3")
 
 #4 -Realizá un programa que encuentre una palabra unida a otra con un guión bajo en un string dado 
 # (el string no debe contener espacios).
+# import re
+# string = input("ingrese una cadena de caracteres: ")
+# patron = "(\w*)_(\w*)"
+# print(re.search(patron, string))
 
 #5 - Escribí un programa que diga si un string empieza con un número específico.
+# import re
+# string = input("ingrese una cadena de caracteres: ")
+# patron = "^3"
+
+# if re.match(patron, string) is not None:
+#     print("el string comienza con el numero 3")
+# else:
+#     print("el string no emieza con el numero 3")
 
 #6 - Escribí un programa que dada una lista de strings verifique si se encuentran en una frase dada.
+# import re
+# strings = ["hola", "te", "hoy"]
+# frase = "hola como te sentis hoy?"
+
+# for palabra in strings:
+#     patron = palabra
+#     if re.search(patron, frase) is not None:
+#         print("la palabra esta en la frase")
+#     else:
+#         print("la palabra no esta en la frase")
 
 #7 - Realizá un programa que encuentre un string que contenga solamente letras minúsculas, mayúsculas, 
 # espacios y números.
+# import re
+# string = input("ingrese una frase: ")
+# patron = "[a-zA-Z0-9(\s)]"
+# coincidencias = []
+
+# for caracter in string:
+#     coincidencias.append(re.findall(patron, caracter))
+    
+# if len(coincidencias) == len(string):
+#     print("todos los caracteres de la frase son o letras mayusculas, o letras minusculas, o numeros, o espacios")
+# else:
+#     print("al menos un caracter no es una letra mayuscula o minuscula, numero o espacio")
 
 #8 - Escribí un programa que separe y devuelva los caracteres númericos de un string.
+import re
+string = input("escriba algo: ")
+patron = '\d'
+lista = []
+
+for caracter in string:
+    lista.append(re.findall(patron, string))
+
+print(lista)
 
 #9 - Escribí un programa que extraiga los caracteres que estén entre guiones en un string. 
 # (String de ejemplo: "Hoy estuvimos trabajando con re -regular expression- en python -con VSCode-")
