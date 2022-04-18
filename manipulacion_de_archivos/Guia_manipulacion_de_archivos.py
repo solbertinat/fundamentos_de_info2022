@@ -12,7 +12,7 @@
 
 #2 - Escribí un programa que lea un archivo e imprima las primeras n líneas.
 # import re
-# archivo = (r"C:C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo.txt")
+# archivo = (r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo.txt")
 # def primeras_lineas(n):
 #     with open(archivo, 'r') as mi_arch:
 #         contador = 0
@@ -84,7 +84,13 @@
 #                 largo = [len(lista[contador])]
 #                 contador += 1
 #         mas_larga = max(largo)
-#         print("la palabra mas larga es " + dic[mas_larga] + " y contiene " + mas_larga + " letras")
+#         def devolver_clave(val):
+#             for key, value in dic.items():
+#                 if val == value:
+#                     print(key)
+#         print("la palabra mas larga es: ")
+#         print(devolver_clave(mas_larga))
+#         print("y contiene " + str(mas_larga) + " letras")
 # palabra_larga(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo_2.txt")
 
 #8 - Escribí un programa que abra dos documentos y guarde el contenido de ambos en un otro documento ya existente.
@@ -103,8 +109,26 @@
 #             guardar.write(texto2)
 
 #9 - Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo.
-# Recordá que la frecuencia es la reación entre número de veces que aparece la palabra en cuestión con respecto
+# Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto
 # a la cantidad total de palabras.
+import re
+path = (r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo.txt")
+with open(path, 'r') as archivo:
+    for palabra in archivo:
+        re.findall(path, path)
+        apariciones = {}
+        contador = 0
+        if palabra not in apariciones:
+            apariciones[palabra] = 0
+            apariciones[palabra] += 1
+            contador += 1
+        def devolver_clave(val):
+           for key, value in apariciones.items():
+               if val == value:
+                   return key
+        frecuencia = {devolver_clave(apariciones[palabra]) : apariciones[palabra]/contador}
+        print(frecuencia)
+"""esta mal"""
 
 
 #10 - Escribí un programa que añada a un archivo dado todos los archivos de texto (.txt) que hayan en una
