@@ -91,30 +91,57 @@
 #     print("al menos un caracter no es una letra mayuscula o minuscula, numero o espacio")
 
 #8 - Escribí un programa que separe y devuelva los caracteres númericos de un string.
-import re
-string = input("escriba algo: ")
-patron = '\d'
-lista = []
+# import re
+# string = input("escriba algo: ")
+# patron = '\d'
+# lista = []
 
-for caracter in string:
-    lista.append(re.findall(patron, string))
+# for caracter in string:
+#     lista = re.findall(patron, string)
 
-print(lista)
+# print(lista)
 
 #9 - Escribí un programa que extraiga los caracteres que estén entre guiones en un string. 
 # (String de ejemplo: "Hoy estuvimos trabajando con re -regular expression- en python -con VSCode-")
+# import re
+# string = "Hoy estuvimos trabajando con re -regular expression- en python -con VSCode-"
+# patron = "-(.*?)-"
+
+# print(re.findall(patron, string))
 
 #10 - Obtené las substrings y las posiciones de estas en una string dada considerando que las substrings 
 # están delimitadas por los caracteres @ o &.
+"""completar"""
 
 #11 - Realizá un programa que dado una lista de strings verifique que dos palabras dentro del string 
 # empiecen con la letra P y las imprima. (Lista de ejemplo: ["Práctica Python", "Práctica C++", "Práctica Fortran"]).
+# import re
+# lista_strings = ["Práctica Python", "Práctica C++", "Práctica Fortran"]
+# patron = "(P\w*)\s(P\w*)"
+
+# for string in lista_strings:
+#     coincidencia = re.search(patron, string)
+#     if coincidencia is not None:
+#         print(coincidencia.group())
 
 #12 - Escribí un programa que reemplace todas las ocurrencias de espacios, guiones bajos y dos puntos por la 
 # barra vertical (|).
+# import re
+# string = "este documento se llama: expresiones_regulares.py"
+# patron = "[\s_:]"
+# print(re.sub(patron, "|", string))
 
 #13 - Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
+# import re
+# string = input("ingrese algo: ")
+# patron = "\W"
+# re.sub(patron, "_", string)
+"""falta hacer que me lo devuelva solo dos veces"""   
 
 #14 - Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
+import re
+string = "hola  mi nombre es    sol bertinat"
+patron = "[\s]"
+print(re.sub(patron, ";", string))
 
 #15 - Realizá un programa que validar si una cuenta de mail está escrita correctamente.
