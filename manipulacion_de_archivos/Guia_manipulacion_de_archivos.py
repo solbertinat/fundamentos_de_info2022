@@ -111,27 +111,20 @@
 #9 - Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo.
 # Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto
 # a la cantidad total de palabras.
-import re
-path = (r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo.txt")
-with open(path, 'r') as archivo:
-    for palabra in archivo:
-        re.findall(path, path)
-        apariciones = {}
-        contador = 0
-        if palabra not in apariciones:
-            apariciones[palabra] = 0
-            apariciones[palabra] += 1
-            contador += 1
-        def devolver_clave(val):
-           for key, value in apariciones.items():
-               if val == value:
-                   return key
-        frecuencia = {devolver_clave(apariciones[palabra]) : apariciones[palabra]/contador}
-        print(frecuencia)
-"""esta mal"""
+# def contador_de_palabras(archivo): 
+#     frecuencias = dict() 
+#     with open(archivo, 'r') as miArchivo: 
+#         word_list = miArchivo.read().split() 
+#         for palabra in word_list:
+#             if palabra in frecuencias: 
+#                 frecuencias[palabra] += 1
+#             else: 
+#                 frecuencias[palabra] = 1 
+#         for word in frecuencias.keys(): 
+#             frecuencias[word] = round(frecuencias[word] / len(word_list),3) #3 decimales 
+#     print(frecuencias)
 
+# contador_de_palabras(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\manipulacion_de_archivos\archivo.txt")
 
 #10 - Escribí un programa que añada a un archivo dado todos los archivos de texto (.txt) que hayan en una
 # determinada carpeta.
-
-

@@ -24,23 +24,23 @@
 #       si un string dado tiene una h seguida de ninguna o más e.
 #       si un string dado tiene una h seguida de una o más e.
 #       si un string dado tiene una h seguida de dos o tres e.
-""""no funciona"""
+""""la condicion 1 no funciona: si solo hay una h lo toma como valido"""
 # import re
 # string = input("ingrese una cadena de caracteres: ")
 
-# patron1 = "(h(e*))"     #0 o mas coincidencias
+# patron1 = "(h(e*))"     #0 o mas coincidencias de e
 # if re.search(patron1, string) is not None:
 #     print("se cumple la condicion 1")
 # else:
 #     print("no se cumple la condicion 1")
 
-# patron2 = "(h(e+))"     #una o mas ocurrencias
+# patron2 = "(h(e+))"     #una o mas ocurrencias de e
 # if re.search(patron2, string) is not None:
 #     print("se cumple la condicion 2")
 # else:
 #     print("no se cumple la condicion 2")
 
-# patron3 = "(h(e{2,3}))"     #dos o tres veces
+# patron3 = "(h(e{2,3}))"     #dos o tres veces de e
 # if re.search(patron3, string) is not None:
 #     print("se cumple la condicion 3")
 # else:
