@@ -135,6 +135,7 @@
 # import re
 # string = input("ingrese algo: ")
 # patron = "\W"
+# contador = 0
 # re.sub(patron, "_", string)
 """falta hacer que me lo devuelva solo dos veces"""   
 

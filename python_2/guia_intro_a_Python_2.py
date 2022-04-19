@@ -169,6 +169,16 @@ print(lista_final)'''
 # Escribí un programa principal, que utilizando la función anterior, vaya pidiendo la temperatura máxima y 
 # mínima de cada día y vaya mostrando la media. El programa tiene que pedir el número de días que se van a introducir.
 
+def temp_media (maxima, minima):
+    media = (int(maxima)+int(minima))/2
+    print("la temperatura media es ", media, " grados")
 
+dias = int(input("ingrese los dias que se vayan a introducir: "))
+contador = 0
+while contador < dias:
+    max = input("ingrese la temperatura maxima: ")
+    min = input("ingrese la temperatura minima: ")
+    temp_media(max, min)
+    contador +=1
 
 #15 - 
