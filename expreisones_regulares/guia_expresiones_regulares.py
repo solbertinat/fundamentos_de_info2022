@@ -111,7 +111,12 @@
 
 #10 - Obtené las substrings y las posiciones de estas en una string dada considerando que las substrings 
 # están delimitadas por los caracteres @ o &.
-"""completar"""
+# import re
+# string = "mi nombre es @sol@ @bertinat@, y soy estudiante de la carrera &administracion de empresas&"
+# patron = "[@&](.*?)[@&]"
+# lista = re.findall(patron, string)
+# for substring in lista:
+#     print(str(substring) + str(re.search(substring, string).span()))
 
 #11 - Realizá un programa que dado una lista de strings verifique que dos palabras dentro del string 
 # empiecen con la letra P y las imprima. (Lista de ejemplo: ["Práctica Python", "Práctica C++", "Práctica Fortran"]).
@@ -146,3 +151,8 @@
 # print(re.sub(patron, ";", string))
 
 #15 - Realizá un programa que validar si una cuenta de mail está escrita correctamente.
+# import re
+# mail = input("ingrese su email: ")
+# patron = "(\w*\W*)@(gmail|hotmail|yahoo)\.com)" 
+"""corregir patron"""
+# print(re.search(patron, mail))
