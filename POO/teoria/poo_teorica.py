@@ -35,9 +35,9 @@ from aves import pepita, anastasia, roberta, chimuelo, hipo
 #         """este metodo toma un objeto, animal alado, que tendrá todos los atributos de esa clase"""
 #         self.equipo.append(animal_alado)
 
-print(hipo)
+"""print(hipo)
 print(hipo.equipo)
-print(hipo.el_equipo())
+print(hipo.el_equipo())"""
 
         # def agregar_dragon(self, dragon):
         #     """este metodo toma un objeto, animal alado, que tendrá todos los atributos de esa clase"""
@@ -52,7 +52,7 @@ print(hipo.el_equipo())
         #     for dragon in self.equipo:
         #     self.entrenar_dragon(dragon)
 
-print(hipo.agregar_animal_alado(chimuelo))
+"""print(hipo.agregar_animal_alado(chimuelo))
 print(hipo.equipo)
 print("energia chimuelo energia", chimuelo.energia)
 hipo.entrenar_dragon(chimuelo)
@@ -60,6 +60,7 @@ print("energia chimuelo despues", chimuelo.energia)
 
 hipo.entrenar_equipo()
 print("energia roberta despues", roberta.energia)
-print("energia chimuelo despues", chimuelo.energia)
+print("energia chimuelo despues", chimuelo.energia)"""
 
 #crear algo generico que sea comer para unir --> cambiarlo para ser polimorfico
+

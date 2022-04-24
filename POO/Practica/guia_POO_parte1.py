@@ -1,0 +1,97 @@
+#1 - Dada la siguiente clase, identificá la interfaz y el estado de la misma
+#interfaz: los mensajes que puede entender son energia(), comer(), acariciar() y estarDebil()
+#estado: los atributos son alimento y caricias
+
+#2 - Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera 
+# que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
+# def volar(self, kms):
+#     self.energia -= 10 + kms
+#     if self.energia <= 0:
+#       print("No puede volar")
+#       print(self.energia)
+#     else:
+#       print("tiene", self.energia, "de energia")
+"""chequear"""
+
+#3 - Creá una clase Notebook cuyo estado sea: marca, modelo y precio, y que tenga un método que 
+# le aplique un descuento al precio, el cual tiene que recibir un número entero (el porcentaje 
+# de descuento) y tiene que devolver cuánto valdría esa notebook si se aplicase el descuento. 
+# Por último hay que instanciar esta clase y en algunos casos aplicar este descuento.
+# class Notebook:
+#     def __init__(self, precio, modelo, marca):
+#         self.precio = precio
+#         self.modelo = modelo
+#         self.marca = marca
+    
+#     def aplicar_dto(self, descuento):
+#         self.precio -= self.precio*(descuento/100)
+#         print("el valor final es: ", self.precio)
+
+# apple = 1
+# Macbook_air = Notebook(5000, 1, 10)
+# print(Macbook_air.aplicar_dto(15))
+
+#4 - Definí una clase que modele un contador, el cual puede incrementar o disminuir en uno el valor 
+# que se ingresa, recordando el valor actual. También puede resetear este valor y al hacerlo se pone
+# en cero. Además es posible indicar directamente un número nuevo que reemplace al valor actual. 
+# class Contador:
+#     def __init__(self, valor):
+#         self.valor = valor
+ 
+#     def inc(self):
+#         self.valor += 1
+    
+#     def dis(self):
+#         self.valor -= 1
+
+#     def reset(self):
+#         self.valor == 0
+
+#     def valorActual(self):
+#         print(self.valor)
+
+#     def valorNuevo(self, nuevoValor):
+#         self.valor = nuevoValor
+    
+# contador = Contador(10)
+# contador.inc() #11
+# contador.inc() #12
+# contador.dis() #11
+# contador.inc() #12
+# contador.valorActual() #12
+# contador.valorNuevo(27)
+# contador.dis() #26
+# contador.dis() #25
+# contador.valorActual() #25
+
+#5 - Modificá el ejercicio anterior de manera que sea capaz de recordar cual fue el último comando 
+# que se le dió, en forma de mensaje. Estos mensajes pueden ser: "reset", "incremento", "disminución" 
+# o "actualización" (para cuando se coloca un valor nuevo). El método para saber el último comando
+# es ultimoComando, y el resultado de aplicarlo a la serie de comandos dicha en el ejercicio anterior 
+# debería ser "disminución".
+# class Contador:
+#     def __init__(self, valor):
+#         self.valor = valor
+#         self.comando = ""
+    
+#     def inc(self):
+#         self.valor += 1
+#         self.comando = "incremento"
+    
+#     def dis(self):
+#         self.valor -= 1
+#         self.comando = "disminucion"
+
+#     def reset(self):
+#         self.valor == 0
+#         self.comando = "reset"
+
+#     def valorActual(self):
+#         print(self.valor)
+
+#     def valorNuevo(self, nuevoValor):
+#         self.valor = nuevoValor
+#         self.comando = "actualizacion"
+
+#     def ultimoComando (self):
+#         print(self.comando)
