@@ -11,7 +11,6 @@
 #       print(self.energia)
 #     else:
 #       print("tiene", self.energia, "de energia")
-"""chequear"""
 
 #3 - Creá una clase Notebook cuyo estado sea: marca, modelo y precio, y que tenga un método que 
 # le aplique un descuento al precio, el cual tiene que recibir un número entero (el porcentaje 
@@ -133,45 +132,45 @@
 # solamente lo que voló la vez que más voló y lo que comió la vez que más comió. El CSSV es otra vez la 
 # misma idea, respecto de la cantidad de veces que voló y comió. Si un gorrión nunca comió, los 
 # coeficientes deben ser None. Un gorrión se considera en equilibrio si su CSS está entre 0.5 y 2.
-# class Gorriones:
-#     def __init__ (self):
-#         self.gramos = 0
-#         self.kms = 0
-#         self.vuelos = []
-#         self.comidas = []
+class Gorriones:
+    def __init__ (self):
+        self.gramos = 0
+        self.kms = 0
+        self.vuelos = []
+        self.comidas = []
 
-#     def volar(self, kms):
-#         self.kms += kms
-#         self.vuelos.append(kms)
+    def volar(self, kms):
+        self.kms += kms
+        self.vuelos.append(kms)
 
-#     def comer(self, gramos):
-#         self.gramos += gramos
-#         self.comidas.append(gramos)
+    def comer(self, gramos):
+        self.gramos += gramos
+        self.comidas.append(gramos)
 
-#     def CSS(self):
-#         if self.gramos <= 0:
-#             return None
-#         else:
-#             return self.kms/self.gramos
+    def CSS(self):
+        if self.gramos <= 0:
+            return None
+        else:
+            return self.kms/self.gramos
 
-#     def CSSP(self):
-#         if self.gramos <= 0:
-#             return None
-#         else:
-#             return int(max(self.vuelos))/int(max(self.comidas))
+    def CSSP(self):
+        if self.gramos <= 0:
+            return None
+        else:
+            return int(max(self.vuelos))/int(max(self.comidas))
 
-#     def CSSV(self):
-#         if self.gramos <= 0:
-#             return None
-#         else:
-#             return len(self.vuelos)/len(self.comidas)
+    def CSSV(self):
+        if self.gramos <= 0:
+            return None
+        else:
+            return len(self.vuelos)/len(self.comidas)
     
-#     def enEquilibrio(self):
-#         if(self.CSS() > 0,5 and self.CSS() < 2):
-#             print("esta en equilibrio")
-#         else:
-#             print("no esta en equilibrio")
-        
+    def enEquilibrio(self):
+        if(self.CSS() > 0,5 and self.CSS() < 2):
+            return True
+        else:
+            return False
+
 # lila = Gorriones()
 # lila.comer(35)
 # lila.volar(80)

@@ -63,4 +63,3 @@ print("energia roberta despues", roberta.energia)
 print("energia chimuelo despues", chimuelo.energia)"""
 
 #crear algo generico que sea comer para unir --> cambiarlo para ser polimorfico
-

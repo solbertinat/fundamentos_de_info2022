@@ -2,7 +2,7 @@ class Golondrina:
   def __init__(self, energia):
     self.energia = energia
 
-  def comer_alpiste(self, gramos):
+  def comer(self, gramos):
     self.energia += 4 * gramos
 
   def volar_en_circulos(self):
@@ -13,14 +13,12 @@ class Golondrina:
     if self.energia <= 0:
       print("No puede volar")
       print(self.energia)
-    else:
-      print("tiene", self.energia, "de energia")
   
   def enEquilibrio (self):
     if(self.energia > 150 and self.energia < 300):
-      print("esta en equilibrio")
+      return True
     else:
-      print("no esta en equilibrio")
+      return False
 
   def esta_debil(self):
     return self.energia < 10
@@ -75,9 +73,9 @@ class Entrenador:
     """lo digo que entrene a cada miembro de su equipo"""
 
 
-pepita = Golondrina(100)
-anastasia = Golondrina(200)
-roberta = Dragon(10, 1000)
-maria = Golondrina(42)
-chimuelo = Dragon(200, 1000)
-hipo = Entrenador([roberta])
+# pepita = Golondrina(100)
+# anastasia = Golondrina(200)
+# roberta = Dragon(10, 1000)
+# maria = Golondrina(42)
+# chimuelo = Dragon(200, 1000)
+# hipo = Entrenador([roberta])
