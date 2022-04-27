@@ -26,8 +26,7 @@
 #         self.precio -= self.precio*(descuento/100)
 #         print("el valor final es: ", self.precio)
 
-# apple = 1
-# Macbook_air = Notebook(5000, 1, 10)
+# Macbook_air = Notebook(5000, "apple", 10)
 # print(Macbook_air.aplicar_dto(15))
 
 #4 - Definí una clase que modele un contador, el cual puede incrementar o disminuir en uno el valor 

@@ -128,4 +128,12 @@
 
 #10 - Escribí un programa que añada a un archivo dado todos los archivos de texto (.txt) que hayan en una
 # determinada carpeta.
-"""consultar"""
+import os
+import glob
+
+os.chdir(r'fundamentos_de_info2022\manipulacion_de_archivos')
+lista_archivos = glob.glob("*.txt")
+with open(r'fundamentos_de_info2022\manipulacion_de_archivos\todos_txt.txt', "a") as archivo_final:
+    for archivo in lista_archivos:
+        with open("archivo", 'r') as file:
+            archivo_final.write(file.read())

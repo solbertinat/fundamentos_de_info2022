@@ -34,40 +34,42 @@
     # decirle al ornitólogo que realice su rutina sobre aves,
     # verificar los valores de las cuatro aves definidas, para las tres que tiene en estudio 
         # el ornitólogo estos valores deberían haber cambiado, para la otra ave no.
-from guia_POO_parte1 import Gorriones
-from aves import Golondrina
+# from guia_POO_parte1 import Gorriones
+# from aves import Golondrina
 
-class Ornitologo():
-    def __init__(self):
-        self.aves_en_estudio = []
+# class Ornitologo():
+#     def __init__(self):
+#         self.aves_en_estudio = []
 
-    def estudiarAve(self, Ave):
-        self.aves_en_estudio.append(Ave)
+#     def estudiarAve(self, Ave):
+#         self.aves_en_estudio.append(Ave)
 
-    def avesEnEstudio(self):
-        print(self.aves_en_estudio)
+#     def avesEnEstudio(self):
+#         print(self.aves_en_estudio)
     
-    def realizarRutinaSobreAves(self):
-        for Ave in self.aves_en_estudio:
-            Ave.comer(80)
-            Ave.volar(70)
-            Ave.comer(10)
+#     def realizarRutinaSobreAves(self):
+#         for Ave in self.aves_en_estudio:
+#             Ave.comer(80)
+#             Ave.volar(70)
+#             Ave.comer(10)
     
-    def avesEnEquilibrio(self):
-        for Ave in self.aves_en_estudio:
-            print(Ave.enEquilibrio())
+#     def avesEnEquilibrio(self):
+#         for Ave in self.aves_en_estudio:
+#             print(Ave.enEquilibrio())
 
-ulises = Ornitologo()
-lila = Gorriones()
-pepita = Golondrina(100)
-maria = Golondrina(200)
-lolo = Gorriones()
+# ulises = Ornitologo()
+# lila = Gorriones()
+# pepita = Golondrina(100)
+# maria = Golondrina(200)
+# lolo = Gorriones()
 
-ulises.estudiarAve(lila)
-ulises.estudiarAve(maria)
-ulises.estudiarAve(lolo)
-ulises.avesEnEstudio() 
-"""faltaria que devuelva el nombre, no el objeto"""
-ulises.realizarRutinaSobreAves()
-ulises.avesEnEquilibrio()
-pepita.enEquilibrio()
+# ulises.estudiarAve(lila)
+# ulises.estudiarAve(maria)
+# ulises.estudiarAve(lolo)
+# ulises.avesEnEstudio() 
+# """faltaria que devuelva el nombre, no el objeto"""
+# ulises.realizarRutinaSobreAves()
+# ulises.avesEnEquilibrio()
+# pepita.enEquilibrio()
+
+
