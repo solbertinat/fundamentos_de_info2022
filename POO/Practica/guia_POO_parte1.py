@@ -16,113 +16,113 @@
 # le aplique un descuento al precio, el cual tiene que recibir un número entero (el porcentaje 
 # de descuento) y tiene que devolver cuánto valdría esa notebook si se aplicase el descuento. 
 # Por último hay que instanciar esta clase y en algunos casos aplicar este descuento.
-# class Notebook:
-#     def __init__(self, precio, modelo, marca):
-#         self.precio = precio
-#         self.modelo = modelo
-#         self.marca = marca
+class Notebook:
+    def __init__(self, precio, modelo, marca):
+        self.precio = precio
+        self.modelo = modelo
+        self.marca = marca
     
-#     def aplicar_dto(self, descuento):
-#         self.precio -= self.precio*(descuento/100)
-#         print("el valor final es: ", self.precio)
+    def aplicar_dto(self, descuento):
+        self.precio -= self.precio*(descuento/100)
+        print("el valor final es: ", self.precio)
 
-# Macbook_air = Notebook(5000, "apple", 10)
-# print(Macbook_air.aplicar_dto(15))
+Macbook_air = Notebook(5000, "apple", 10)
+print(Macbook_air.aplicar_dto(15))
 
 #4 - Definí una clase que modele un contador, el cual puede incrementar o disminuir en uno el valor 
 # que se ingresa, recordando el valor actual. También puede resetear este valor y al hacerlo se pone
 # en cero. Además es posible indicar directamente un número nuevo que reemplace al valor actual. 
-# class Contador:
-#     def __init__(self, valor):
-#         self.valor = valor
+class Contador:
+    def __init__(self, valor):
+        self.valor = valor
  
-#     def inc(self):
-#         self.valor += 1
+    def inc(self):
+        self.valor += 1
     
-#     def dis(self):
-#         self.valor -= 1
+    def dis(self):
+        self.valor -= 1
 
-#     def reset(self):
-#         self.valor == 0
+    def reset(self):
+        self.valor == 0
 
-#     def valorActual(self):
-#         print(self.valor)
+    def valorActual(self):
+        print(self.valor)
 
-#     def valorNuevo(self, nuevoValor):
-#         self.valor = nuevoValor
+    def valorNuevo(self, nuevoValor):
+        self.valor = nuevoValor
     
-# contador = Contador(10)
-# contador.inc() #11
-# contador.inc() #12
-# contador.dis() #11
-# contador.inc() #12
-# contador.valorActual() #12
-# contador.valorNuevo(27)
-# contador.dis() #26
-# contador.dis() #25
-# contador.valorActual() #25
+contador = Contador(10)
+contador.inc() #11
+contador.inc() #12
+contador.dis() #11
+contador.inc() #12
+contador.valorActual() #12
+contador.valorNuevo(27)
+contador.dis() #26
+contador.dis() #25
+contador.valorActual() #25
 
 #5 - Modificá el ejercicio anterior de manera que sea capaz de recordar cual fue el último comando 
 # que se le dió, en forma de mensaje. Estos mensajes pueden ser: "reset", "incremento", "disminución" 
 # o "actualización" (para cuando se coloca un valor nuevo). El método para saber el último comando
 # es ultimoComando, y el resultado de aplicarlo a la serie de comandos dicha en el ejercicio anterior 
 # debería ser "disminución".
-# class Contador:
-#     def __init__(self, valor):
-#         self.valor = valor
-#         self.comando = ""
+class Contador:
+    def __init__(self, valor):
+        self.valor = valor
+        self.comando = ""
     
-#     def inc(self):
-#         self.valor += 1
-#         self.comando = "incremento"
+    def inc(self):
+        self.valor += 1
+        self.comando = "incremento"
     
-#     def dis(self):
-#         self.valor -= 1
-#         self.comando = "disminucion"
+    def dis(self):
+        self.valor -= 1
+        self.comando = "disminucion"
 
-#     def reset(self):
-#         self.valor == 0
-#         self.comando = "reset"
+    def reset(self):
+        self.valor == 0
+        self.comando = "reset"
 
-#     def valorActual(self):
-#         print(self.valor)
+    def valorActual(self):
+        print(self.valor)
 
-#     def valorNuevo(self, nuevoValor):
-#         self.valor = nuevoValor
-#         self.comando = "actualizacion"
+    def valorNuevo(self, nuevoValor):
+        self.valor = nuevoValor
+        self.comando = "actualizacion"
 
-#     def ultimoComando (self):
-#         print(self.comando)
+    def ultimoComando (self):
+        print(self.comando)
 
 #6 - Implementá una clase que represente una calculadora sencilla, que permita sumar, restar y multiplicar. 
 # Este objeto debe entender los siguientes mensajes: cargar(numero), sumar(numero), restar(numero), 
 # multiplicar(numero) y valorActual()
-# class Calculadora:
-#     def __init__(self):
-#         self.numero = 0
+class Calculadora:
+    def __init__(self):
+        self.numero = 0
 
-#     def cargar(self, carga):
-#         self.numero = carga
+    def cargar(self, carga):
+        self.numero = carga
 
-#     def sumar(self, suma):
-#         self.numero += suma
+    def sumar(self, suma):
+        self.numero += suma
 
-#     def restar(self, resta):
-#         self.numero -= resta
+    def restar(self, resta):
+        self.numero -= resta
 
-#     def multiplicar(self, multiplicacion):
-#         self.numero *= multiplicacion
+    def multiplicar(self, multiplicacion):
+        self.numero *= multiplicacion
     
-#     def valorActual(self):
-#         print(self.numero)
+    def valorActual(self):
+        print(self.numero)
 
-# calculadora = Calculadora()
-# calculadora.cargar(0)
-# calculadora.sumar(4)
-# calculadora.multiplicar(5)
-# calculadora.restar(8)
-# calculadora.multiplicar(2)
-# calculadora.valorActual() #24
+calculadora = Calculadora()
+calculadora.cargar(0)
+calculadora.sumar(4)
+calculadora.multiplicar(5)
+calculadora.restar(8)
+calculadora.multiplicar(2)
+calculadora.valorActual() #24
 
 #7 - Definí una clase de gorriones, de los cuales nos interesa conocer dos medidas conocidas como 
 # CSS (coeficiente de serenidad silenciosa), CSSP y CSSV (como el CSS pero “pico” y “veces”). El 
@@ -170,12 +170,12 @@ class Gorriones:
         else:
             return False
 
-# lila = Gorriones()
-# lila.comer(35)
-# lila.volar(80)
-# lila.comer(70)
-# lila.volar(120)
-# print(lila.CSS())
-# print(lila.CSSP())
-# print(lila.CSSV())
-# print(lila.enEquilibrio())
+lila = Gorriones()
+lila.comer(35)
+lila.volar(80)
+lila.comer(70)
+lila.volar(120)
+print(lila.CSS())
+print(lila.CSSP())
+print(lila.CSSV())
+print(lila.enEquilibrio())

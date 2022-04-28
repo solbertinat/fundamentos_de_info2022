@@ -23,8 +23,7 @@
 #3 - Creá un programa que verifique las siguientes condiciones:
 #       si un string dado tiene una h seguida de ninguna o más e.
 #       si un string dado tiene una h seguida de una o más e.
-#       si un string dado tiene una h seguida de dos o tres e.
-""""la condicion 1 no funciona: si solo hay una h lo toma como valido"""
+# #       si un string dado tiene una h seguida de dos o tres e.
 # import re
 # string = input("ingrese una cadena de caracteres: ")
 
@@ -141,7 +140,7 @@
 # string = input("ingrese algo: ")
 # patron = "\W"
 # contador = 0
-# re.sub(patron, "_", string)
+# print(re.sub(patron, "_", string))
 """falta hacer que me lo devuelva solo dos veces"""   
 
 #14 - Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
@@ -153,6 +152,9 @@
 #15 - Realizá un programa que validar si una cuenta de mail está escrita correctamente.
 # import re
 # mail = input("ingrese su email: ")
-# patron = "(\w*\W*)@(gmail|hotmail|yahoo)\.com)" 
-"""corregir patron"""
-# print(re.search(patron, mail))
+# patron = "((.*?)@((gmail|hotmail|yahoo)\.com){1})" 
+# if re.search(patron, mail) is not None:
+#     print("la direccion de correo ingresada es valida")
+# else:
+#     print("la direccion de correo ingresada es invalida")
+"""hacer que no sea valida si solo pongo por ej @gmail.com"""
