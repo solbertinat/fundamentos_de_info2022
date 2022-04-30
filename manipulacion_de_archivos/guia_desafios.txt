@@ -1,0 +1,23 @@
+Desafio I
+import os
+os.chdir(r"fundamentos_de_info2022\manipulacion_de_archivos")
+open("bio.txt", "a") 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Desafio II
+import os
+os.mkdir("practicas") --> crea un repositorio llamdo practicas
+print(os.listdir(r"fundamentos_de_info2022\manipulacion_de_archivos")) --> imprime una lista con los archivos del repositorio al que corresponde el path
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Desafio III
+path = r"fundamentos_de_info2022\manipulacion_de_archivos\bio.txt"
+with open(path, "w") as bio:
+    bio.write("mi nombre es Sol Bertinat, tengo 20 anios y naci en Rosario, Santa Fe")
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Desafio IV
+path = r"fundamentos_de_info2022\manipulacion_de_archivos\manipulacion_archivos.txt"
+with open(path, "r") as archivo:
+    print(archivo.readlines())
+    
