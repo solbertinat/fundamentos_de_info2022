@@ -73,3 +73,29 @@
 # pepita.enEquilibrio()
 
 
+#4 - ...
+# class MedioDeTransporte:
+#   def __init__(self, combustible):
+#     self.combustible = combustible
+    
+#   def cargar_combustible(self, cantidad):
+#     self.combustible += cantidad
+    
+#   def entran_personas(self, personas):
+#     return personas <= self.maximo_personas() 
+  
+# class Auto(MedioDeTransporte):
+#   def recorrer(self, km):
+#     self.combustible -= (km/2)
+    
+#   def maximo_personas(self):
+#     return 5
+  
+# class Moto(MedioDeTransporte):
+#   def recorrer(self, km):
+#     self.combustible -= km
+    
+#   def maximo_personas(self):
+#     return 2
+
+

@@ -35,9 +35,6 @@ from aves import pepita, anastasia, roberta, chimuelo, hipo
 #         """este metodo toma un objeto, animal alado, que tendrá todos los atributos de esa clase"""
 #         self.equipo.append(animal_alado)
 
-"""print(hipo)
-print(hipo.equipo)
-print(hipo.el_equipo())"""
 
         # def agregar_dragon(self, dragon):
         #     """este metodo toma un objeto, animal alado, que tendrá todos los atributos de esa clase"""
@@ -52,14 +49,48 @@ print(hipo.el_equipo())"""
         #     for dragon in self.equipo:
         #     self.entrenar_dragon(dragon)
 
-"""print(hipo.agregar_animal_alado(chimuelo))
-print(hipo.equipo)
-print("energia chimuelo energia", chimuelo.energia)
-hipo.entrenar_dragon(chimuelo)
-print("energia chimuelo despues", chimuelo.energia)
-
-hipo.entrenar_equipo()
-print("energia roberta despues", roberta.energia)
-print("energia chimuelo despues", chimuelo.energia)"""
 
 #crear algo generico que sea comer para unir --> cambiarlo para ser polimorfico
+
+#6 -Hacé que hipo pueda entrenar a las golondrinas. ¿Qué comportamiento deberían entender las golondrinas ahora?
+# def entrenar_golondrina(self, golondrina):
+#       for i in range(20):
+#         golondrina.volar_en_circulos()
+#       golondrina.comer_alpiste(50)
+    
+# def entrenar_equipo(self):
+#       for dragon in self.equipo:
+#         self.entrenar_dragon(dragon)
+#       for golondrina in self.equipo:
+#         self.entrenar_golondrina(golondrina)
+
+#7 - Definí el método entrenamiento_intensivo, que hace dar vueltas en circulos a sus entrenados hasta que estén débiles.
+#     def entrenamiento_intensivo(self):
+#       for animal_alado in self.equipo:
+#         while animal_alado.esta_debil is not True:
+#           animal_alado.volar_en_circulos()
+
+#Desafio II
+#1 - Ahora hacé las modificaciones en las clases Golondrina y Dragones para que un Entrenador pueda entrenar tanto a aves como dragones.
+# class AnimalesAlados():  #generalizo lo que tienen en comun ambas clases
+#   def esta_feliz(self):
+#     return self.energia > 500
+
+# class Golondrina(AnimalesAlados): ...
+
+# class Dragon(AnimalesAlados): ...
+
+#2 - Creá una clase de AvesNoVoladoras, que come_alpiste y como su nombre indica no puede volar_en_circulos pero si correr_en_circulos disminuyendo su energía en 25.
+# class AvesNoVoladoras:
+#   def __init__(self, energia):
+#     self.energia = energia
+
+#   def comer_alpiste(self, gramos):
+#     self.energia += 4 * gramos
+
+#   def correr_en_circulos(self):
+#     self.energia -= 25
+
+#3 - ¿Las AvesNoVoladoras son polimórficas con las aves Golondrinas desde el punto de vista del Entrenedor?
+# ¿Cómo podemos solucionar este inconveniente?
+#no, no son polimorficas desde el punto de vista del entrenador. habria que crear una instancia en el entrenador, en la que 
