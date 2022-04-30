@@ -1,0 +1,80 @@
+I Desafío I
+mate = mate seleccionado
+yerbero = lata de yerba
+maceta = maceta con cactus del balcón 
+
+if yerbero tiene yerba: 
+	if mate está vacio:
+    		llenar mate con yerba del yerbero
+	de lo contrario:
+   		vaciar mate en maceta
+    		llenar mate con yerba del yerbero
+de lo contrario:
+	comprar yerba
+	if mate está vacio:
+    		llenar mate con yerba del yerbero
+	de lo contrario:
+   		vaciar mate en maceta
+    		llenar mate con yerba del yerbero
+
+if bombilla no está limpia:
+	lavar bombilla
+	secar bombilla
+	poner bombilla en el mate
+de lo contrario:
+	poner bombilla en el mate
+
+----------------------------------------------------------------------------------------------------------------------
+Desafío II
+>
+python
+
+-----------------------------------------------------------------------------------------------------------------------
+Desafío III
+>>> saludo = "Hola mundo"  
+>>> len(saludo)               //contar caracteres del string
+>>> saludo.upper()            //convertir caracteres a mayúscula
+>>> saludo.lower()	      //convertir caracteres a minúscula
+>>> saludo.count('o')	      //contar 'caracter'
+>>> saludo.replace('o','a')   //reemplazar 'caracter1' por 'caracter2'
+
+sí, se pueden combinar.
+
+-----------------------------------------------------------------------------------------------------------------------
+Desafío IV
+sí, lo permite. Al imprimir saludo se imprimiría la nueva frase con el reemplazo hecho.
+inmutabilidad: significa que si el valor puede cambiar, el objeto se llama mutable, mientras que si el valor no puede 
+cambiar, el objeto se llama inmutable.
+
+-----------------------------------------------------------------------------------------------------------------------
+Desafío VI
+def termos_por_ronda(personas):
+	termos = (30 * personas) / 1000
+	return print("se consumirán ", termos, " termos por ronda de ", personas, " personas.")
+
+------------------------------------------------------------------------------------------------------------------------
+Desafío VII
+def vaquita(precio_medialuna, comensales):
+	costo_u = (12 * precio_medialuna) / comensales
+	return print("cada comensal deberá aportar " costo.u " pesos.")
+
+------------------------------------------------------------------------------------------------------------------------
+Desafío VIII
+def calcular_cantidad_de_agua (personas, rondas):	
+	cantidad = 30 * personas * rondas
+	if (cantidad >= 1000): 
+		return "vas a necesitar más de un termo"
+	else:
+		return cantidad " ml."
+
+------------------------------------------------------------------------------------------------------------------------
+Desafío IX
+dict1 = {"no veggie": 0, "veganas":0, "vegetarianas":0} #contador para cada gusto, arranca en 0
+pedido = {"Ana" : "no veggie", "Paul": "veganas", "Luz": "vegetarianas"}
+lista_comensales = pedido.keys()  #defino la lista, agarro solo las claves (Ana, Paul, Luz)
+def empanadas_por_gusto():
+    for comensal in lista_comensales:     
+        dict1[pedido[comensal]] +=1  #+=1 es igual a dict1 = 1 + dict1
+    print(dict1)
+
+
