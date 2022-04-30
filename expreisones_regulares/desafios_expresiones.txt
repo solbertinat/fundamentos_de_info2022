@@ -1,0 +1,23 @@
+Desafio I
+ \d{4,}
+
+--------------------------------------------------------------
+Desafio II
+[a-z]{3,6}
+
+---------------------------------------------------------------
+Desafio III
+ab*
+
+----------------------------------------------------------------
+Desafio IV
+texto = 'En la clase de Introducción a la programación hay 30 estudiantes' 
+expresion regular: \d+
+
+------------------------------------------------------------------
+Desafio V 
+texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+print(texto[22:26])
+--> devuelve: amet
+--> span indica la ubicacion del match en el texto
+
