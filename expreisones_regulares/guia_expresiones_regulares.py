@@ -137,14 +137,10 @@
 
 #13 - Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
 import re
-string = "aeih$aes#vr6^^^"
-contador = 0
-while contador <= 2:
-    for caracter in string:
-        re.sub("\W", "_", string)
-        contador += 1
-print(string)
-  
+def sustituir(str): 
+    print(re.sub("\W", "_", str, 2))
+
+sustituir("aeih$aes#vr6^^^")
 
 #14 - Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
 # import re
