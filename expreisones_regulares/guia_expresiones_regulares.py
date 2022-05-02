@@ -136,12 +136,15 @@
 # print(re.sub(patron, "|", string))
 
 #13 - Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
-# import re
-# string = input("ingrese algo: ")
-# patron = "\W"
-# contador = 0
-# print(re.sub(patron, "_", string))
-"""falta hacer que me lo devuelva solo dos veces"""   
+import re
+string = "aeih$aes#vr6^^^"
+contador = 0
+while contador <= 2:
+    for caracter in string:
+        re.sub("\W", "_", string)
+        contador += 1
+print(string)
+  
 
 #14 - Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
 # import re
