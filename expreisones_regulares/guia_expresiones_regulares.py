@@ -138,7 +138,7 @@
 #13 - Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
 import re
 def sustituir(str): 
-    print(re.sub("\W", "_", str, 2))
+    print(re.sub(r"\W", "_", str, 2))
 
 sustituir("aeih$aes#vr6^^^")
 
