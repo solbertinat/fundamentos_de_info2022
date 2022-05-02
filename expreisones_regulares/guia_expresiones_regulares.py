@@ -149,11 +149,12 @@ sustituir("aeih$aes#vr6^^^")
 # print(re.sub(patron, ";", string))
 
 #15 - Realizá un programa que validar si una cuenta de mail está escrita correctamente.
-# import re
-# mail = input("ingrese su email: ")
-# patron = "((.*?)@((gmail|hotmail|yahoo)\.com){1})" 
-# if re.search(patron, mail) is not None:
-#     print("la direccion de correo ingresada es valida")
-# else:
-#     print("la direccion de correo ingresada es invalida")
+import re
+mail = input("ingrese su email: ")
+patron = "([a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+(@(gmail|hotmail|yahoo)\.com){1})" 
+if re.search(patron, mail) is not None:
+    print("la direccion de correo ingresada es valida")
+else:
+    print("la direccion de correo ingresada es invalida")
+
 """hacer que no sea valida si solo pongo por ej @gmail.com"""
