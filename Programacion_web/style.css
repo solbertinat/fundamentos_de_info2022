@@ -1,0 +1,24 @@
+body{
+    margin-left: 20px
+}
+
+.titulo {
+    color: rgb(190, 255, 106);
+    margin-left: 30px;
+    background-color: darkslateblue;
+    border: outset deeppink 10px;
+    padding-left: 300px; /* --> pading es dentro del bloque, no respecto de la pagina (margen)*/
+}
+
+.contenido img{
+    width: 356px;
+    height: 261px
+}
+
+.contenido h1{
+    font-size: 15px;
+    margin-left: 10px;
+    font-family:'Segoe UI'; 
+    font-style: oblique;
+    color: rgb(255, 20, 78)
+}
