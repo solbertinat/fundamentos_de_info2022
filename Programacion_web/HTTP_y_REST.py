@@ -35,36 +35,42 @@ print(pedido.json()) '''
 
 # Desafío III: contrastá con lo que sucede al hacer get de 'https://macowins-server.herokuapp.com/prendas/1' 
 # ¿Qué te devuelve el método headers? ¿Qué status_code obtenes?
-pedido = requests.get('https://macowins-server.herokuapp.com/prendas/1')
-print(pedido)
-""""Devuelve """
-print(pedido.headers)
-""""Devuelve """
-print(pedido.status_code)
-""""Devuelve """
+# pedido = requests.get('https://macowins-server.herokuapp.com/prendas/1')
+# print(pedido)
+""""Devuelve <Response [200]>"""
+# print(pedido.headers)
+""""Devuelve {'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Expires': '-1', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '50', 'Etag': 'W/"32-i8e+gZ5GUBVXp/2hTq5pj1i9+f8"', 'Vary': 'Accept-Encoding', 'Date': 'Fri, 27 May 2022 17:52:24 GMT', 'Via': '1.1 vegur'}"""
+# print(pedido.status_code)
+""""Devuelve 200"""
 
 # Desafío IV: ¿y que sucederá si consultamos a una dirección que no existe, como por ejemplo 
 # https://macowins-server.herokuapp.com/prindas/1? ¡Averigualo!
-pedido = requests.get('https://macowins-server.herokuapp.com/prindas/1?')
-print(pedido)
-""""Devuelve """
+# pedido = requests.get('https://macowins-server.herokuapp.com/prindas/1?')
+# print(pedido)
+""""Devuelve <Response [404]>"""
 
 # Desafío V: hacé requests.get('https://macowins-server.herokuapp.com/ventas') y 
 # requests.get('https://macowins-server.herokuapp.com/ventas/2)' y contrastá el resultado con tu respuesta anterior
-requests.get('https://macowins-server.herokuapp.com/ventas') 
-requests.get('https://macowins-server.herokuapp.com/ventas/2')
+# print((requests.get('https://macowins-server.herokuapp.com/prendas')).json())
+# print((requests.get('https://macowins-server.herokuapp.com/prendas/1')).json())
+# print((requests.get('https://macowins-server.herokuapp.com/ventas')).json())
+# print((requests.get('https://macowins-server.herokuapp.com/ventas/2')).json())
+"""En los casos donde no se aclara el numero devuelve todos los pedidos o todas las ventas (según se le pida), mientras
+que si se aclara el numero de pedido o venta, devuelve unicamente los datos correspondientes a dicho pedido o venta"""
 
 # Desafío VI: Obtené las remeras.
-requests.get('https://macowins-server.herokuapp.com/prendas/remeras')
+# pedido = requests.get('https://macowins-server.herokuapp.com/prendas?tipo=remera').json()
+# print(pedido)
 
 # Desafío VII: Obtené las remeras XS
-requests.get('https://macowins-server.herokuapp.com/prendas/remeras/XS')
+# pedido = requests.get('https://macowins-server.herokuapp.com/prendas?tipo=remera&talle=XS').json()
+# print(pedido)
 
-# Desafío VIII: decí usando tus palabras qué significa la URI de este ejemplo cerebral 
-""" """
+# Desafío VIII: decí usando tus palabras qué significa la URI de este ejemplo cerebral: cerebro://recuerdos:3403/recientes#hoy?tema=http
+""" En este caso se está pidiendo al cerebro que busque un recuerdo de hoy sobre http"""
 
 # Desafío IX: ¿a través de qué IP accedés a google desde tu computadora?
-
+""" preguntar """
 
 # Desafío X: ¿Qué devolverá la página principal (home) de nuestro sitio? Averiguá el Content-Type de /home
 
