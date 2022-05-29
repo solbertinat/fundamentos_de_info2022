@@ -1,4 +1,4 @@
-import requests
+import requests, json
 
 # pedido = requests.get('https://macowins-server.herokuapp.com/prendas/1')
 # print(pedido) #si da una rta, el canal de comunicacion funciona
@@ -73,22 +73,62 @@ que si se aclara el numero de pedido o venta, devuelve unicamente los datos corr
 """ preguntar """
 
 # Desafío X: ¿Qué devolverá la página principal (home) de nuestro sitio? Averiguá el Content-Type de /home
+# home = requests.get('https://macowins-server.herokuapp.com/home')
+# print(home.headers)
+""" 'Content-Type': 'text/html; charset=utf-8' """
 
 # Desafío XI: consultá 4 sitios diferentes y averiguá para todos ellos qué servidor utilizan, si el contenido se 
 # transfiere encriptado, y la fecha de expieración del contenido.
+# meli = requests.get('https://www.mercadolibre.com.ar/')
+# print(meli.headers)
+""" 'Server': 'Tengine' | 'content-encoding': 'gzip' | Expires=Sat, 27 May 2023 23:57:23 GMT, _csrf=t71GpsZRZBcugGf6zqwElzyA"""
+
+# bcra = requests.get('http://www.bcra.gov.ar/')
+# print(bcra.headers)
+""" 'Expires': 'Fri, 27 May 2022 23:59:54 GMT' , no aclara nada sobre el contenido y el servidor"""
+
+# youtube = requests.get('https://www.youtube.com/')
+# print(youtube.headers)
+""" 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT' | 'Content-Encoding': 'gzip' | 'Server': 'ESF' """
+
+# github = requests.get('https://github.com/')
+# print(github.headers)
+""" 'Server': 'GitHub.com' | 'Content-Encoding': 'gzip' | Expires=Sun, 28 May 2023 00:05:46 GMT """
 
 # Desafío XII: ¿qué código de estado devuelve cuando un recurso es creado? Averigualo
+# data = {'id': 21}
+# r = requests.post('https://macowins-server.herokuapp.com/prendas/', data=data)
+# print(r.status_code)
+""" Devuelve 201 """
 
 # Desafío XIII: Nos quedaron prendas con ids que no nos sirven; ¡borralas!
+# requests.delete('https://macowins-server.herokuapp.com/?id=21')
+# print(requests.get('https://macowins-server.herokuapp.com/prendas').json())
+"""chequear"""
 
 # Desafío XIV: Creá una venta.
+# headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+# data =  { "tipo": "pantalon", "talle": "42" }
+# r = requests.post('https://macowins-server.herokuapp.com/ventas', data=json.dumps(data), headers=headers)
+# print(r.status_code)
 
 # Desafío XV: Intentá hacer POST sobre una venta concreta, como por ejemplo https://macowins-server.herokuapp.com/prendas/1. 
 # ¿Qué sucede?
+# r = requests.post('https://macowins-server.herokuapp.com/prendas/1')
+# print(r.status_code)
+""" Devuelve 404, es decir, error """
 
 # Desafío XVI: ¿cuales de los siguientes sitios tiene (o parecen tener, al menos) rutas REST?
-# Github, Youtube, Facebook, Infobae, Pagina12, La Nacion, UNQ, UCEMA
+# Github: si
+# Youtube: si
+# Facebook: si
+# Infobae: si
+# Pagina12: si
+# La Nacion: si
+# UNQ: si
+# UCEMA: si
 
 # Desafío XVII: si no se organizan de forma REST, ¿cómo se organizan sus rutas?
+""" preguntar """
 
 # Desafío XVIII: ¿En dónde está desplegado QMP? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
