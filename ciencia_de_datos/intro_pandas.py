@@ -26,12 +26,12 @@ personas = pd.read_csv(r"C:\Users\ulichtenbaum\Downloads\personas_2011.csv", sep
 # .info() = averiguar la información general de la tabla
 # muestra los nombres de las columnas de la tabla y el tipo de datos que contiene cada una de ellas
 
-# describe: de todas las columnas numericas me devuelve los parametros estadisitcos
+# .describe(): de todas las columnas numericas me devuelve los parametros estadisitcos
 # print(personas.describe())
 # el problema con describe es que se aplica a todas las columnas con tipo de dato numerico, y en algunos no tiene 
 # sentido ya que son identificadores.
 
-# iloc: devuelve el elemento que se encuentra en la fila con nombre fila y la columna de con nombre columna del DataFrame
+# .iloc[]: devuelve el elemento que se encuentra en la fila con nombre fila y la columna de con nombre columna del DataFrame
 # df.loc[fila, columna] 
 # imprime la interseccion (Celda). Si le paso fila e imprime todos los datos de las columnas para esa fila
 
@@ -60,7 +60,10 @@ personas = pd.read_csv(r"C:\Users\ulichtenbaum\Downloads\personas_2011.csv", sep
 # print(personas.groupby("seniority_level")[["persona_id"]].count())
 # lo mismo que el anterior, pero solo muestra lo que corresponde a la columna persona_id
 
-
+# Podemos operar con las columnas con operadores relacionales y matemáticos:
+# personas['edad'] * 2
+# y también sirven para filtrar un dataframe:
+# personas[personas['edad'] < 35 ]
 
 # filtrado: personas de sexo 1 y menor de 40 años
 # filtro = personas[(personas["sexo_id"] == 1) & (personas["edad"] < 40)]
@@ -79,22 +82,24 @@ personas = pd.read_csv(r"C:\Users\ulichtenbaum\Downloads\personas_2011.csv", sep
 # personas[personas["seniority_level"].str.contains("A")]
 # str.contains() sirve para encontrar substrings dentro de una columna 
 
+# Desafio V: Contá cuántas personas de 30 años ingresaron al ministerio en 2011 ¿Cuántas formas de hacer este cálculo 
+# se te ocurren?
+# print(len(personas[(personas["edad"] == 30)]))
+# ingresaron 2098 personas.
+
+# Desafio VI: Descargala en formato csv y cargala en un nuevo DataFrame de nombre categorias  
+categorias = pd.read_csv(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\ciencia_de_datos\ref_categoria_conicet.csv", sep=";")
+
+# Desafío VII: Identificá si existen columnas en común con el DataFrame grande
+# print(categorias.info())
+# print(personas.info())
+# la columna en común que tienen es categoria_conicet_id
+
 # concatenar --> adherir dos dataframes
 # categoria_a = personas[personas["seniority_level"].str.contains("A")]
 # categoria_b = personas[personas["seniority_level"].str.contains("B")]
 # pd.concat([categoria_a, categoria_b])
 # me devuelve los seniority level A y despues los B
 
+personas_cat = pd.merge(personas, categorias, on='categoria_conicet_id')
 
-
-
-
-# Desafio V: Contá cuántas personas de 30 años ingresaron al ministerio en 2011 ¿Cuántas formas de hacer este cálculo 
-# se te ocurren?
-
-# Desafio VI: Descargala en formato csv y cargala en un nuevo DataFrame de nombre categorias  
-
-# Desafío VII: Identificá si existen columnas en común con el DataFrame grande
-
-# Desafío vIII: averiguá para qué sirve cada uno de los métodos y qué parámetros podés pasarseles. 
-# ¡Esta información nos será útil para más adelante!
