@@ -70,7 +70,7 @@ que si se aclara el numero de pedido o venta, devuelve unicamente los datos corr
 """ En este caso se está pidiendo al cerebro que busque un recuerdo de hoy sobre http"""
 
 # Desafío IX: ¿a través de qué IP accedés a google desde tu computadora?
-""" preguntar """
+""" Google Public DNS IPv4: 8.8.8.8. 8.8.4.4. """
 
 # Desafío X: ¿Qué devolverá la página principal (home) de nuestro sitio? Averiguá el Content-Type de /home
 # home = requests.get('https://macowins-server.herokuapp.com/home')
