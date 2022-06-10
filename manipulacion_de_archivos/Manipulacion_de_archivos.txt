@@ -1,0 +1,80 @@
+COMANDOS BASICOS
+ls = lista los archivos (escribir en terminal)
+pwd = working direction / carpeta donde estoy
+cd = change direction / cambiar de un directorio a otro (entrar a una carpeta)
+cd .. = voy un paso para atrás (vuelvo a la carpeta de mayor jerarquía
+exit() para salir de python
+
+Directorio = carpeta → cd solo se puede usar para directorios, no archivos
+
+Con notepad nombre_archivo = abro el archivo en el bloc de notas
+
+Ejecutar un script:
+	→ script: una porción de código en un archivo (de cualquier extensión), generalmente ejecutable, que se ejecuta contra el intérprete. 
+	→ para ejecutarlo: python nombre_arch.py
+
+
+APERTURA DE ARCHIVOS 
+open("path_al_archivo", "modo")
+    --> path_al_archivo es un str que indica la ruta
+    --> modo es un str que indica como abrir el archivo
+        → r = abre un archivo solo para lectura
+        → r+ = abre un archivo para lectura y escritura
+        → a = abre un archivo para agregar info. Si el archivo no existe, crea uno nuevo para escritura
+        → w = abre un archivo solo para escritura. Sobreescribe el archivo si este ya existe. Si no, crea uno nuevo para escritura
+
+
+CERRAR UN ARCHIVO
+archivo = open(path_al_archivo, modo)
+archivo.close()
+o 
+with open(path_al_archivo, modo) as mi_arch:
+Este modo de apertura nos asegura el cierre del archivo al salir del bloque with, aún cuando aparezcan errores. Es por eso que esta es la forma más recomendada para la apertura de archivos.
+
+
+ABRIR UN ARCHIVO DESDE PYTHON 
+Biblioteca OS (sistema operativo) → para movernos de una carpeta a otra, acceder a archivos, dialogar con la máquina para que ejecute otros programas, etc
+    --> os.getcwd() = permite conocer el directorio de trabajo actual
+    --> os.chdir(path) = cambiar de directorio de forma automática. Mostrará un error si intenta cambiar a un directorio que no existe
+            - Para trabajar con una biblioteca primero debo importarla (y debe estar instalada): import os
+            - os.getcwd() / lo guardo en una variable: path = os.getcwd() / y llamo a la variable
+            - path = path + "\\mi_arch.txt"   / llamo a la variable devuelta
+    --> os.mkdir() → toma como argumento un nombre (str), y crea una carpeta
+    --> os.path.exists(ruta_relativa) → devuelve un booleano
+    --> os.listdir() → obtenemos una lista de todos los archivos que se encuentran en una carpeta
+
+
+BIBLIOTECA GLOB
+Tiene el mismo fin que os.listdir: acceder a los archivos que hayan en una determinada carpeta sin conocer sus nombres en particular, o acceder a un grupo de estos archivos que tengan algo en común.
+Obtiene todos los archivos de una carpeta, pero además, tenemos la posibilidad de listar archivos específicos.
+glob.glob("*.py")
+['Ej1.py', 'Ej3.py', 'Ej2.py', 'Ej4.py', 'Ej5.py'...]
+
+
+MANIPULAR UN ARCHIVO 
+Escribir un archivo _______________________________________________________________________________________________________________________________________________________________________
+.write()
+Ej:with open("mi_archivo.txt", "w") as my_file: 
+ 	     my_file.write("hola hola hola")
+
+Leer un archivo: _______________________________________________________________________________________________________________________________________________________________________
+.read()
+    Lee del archivo según el número de bytes de tamaño. Si no se pasa ninguno, entonces lee todo el archivo.
+    Ej: open("mi_archivo.txt", "r").read()
+    O nombre_archivo.read() (si ya está abierto el archivo)
+.readline()
+    Lee como máximo el número de caracteres de tamaño de la línea. Esto continúa hasta el final de la línea y luego regresa. returns one line from the file. You can also specify how many bytes from the line to return, by using the size parameter.
+    Ej: nombre_archivo.readline() (si ya está abierto el archivo)
+.readlines()
+    Esto lee las líneas restantes del objeto de archivo y las devuelve como una lista.
+    Ej: nombre_archivo.readlines() (si ya está abierto el archivo)
+
+
+RUTAS ABSOLUTAS Y RELATIVAS
+El path o ruta a un archivo es el recorrido de directorios o carpetas que debemos recorrer para llegar a nuestro archivo. Esta se escribe separando los nombres de los respectivos directorios separados por “\”. 
+Path absoluto: path entero. Ejemplo: 
+	"C:\home\Facultad\Fundamentos\Manipulación_de_archivos.md"
+
+Path relativo: path “resumido” (./)
+Por cuestiones de comodidad muchas veces es recomendable trabajar con rutas relativas ya que de esta manera solo son movemos dentro de las carpetas correspondientes y no hay peligro de poder acceder a otra carpeta y modificar cosas que no deberíamos, siendo, tal vez, el mayor "inconveniente" saber en qué carpeta estamos parados, para saber para dónde hay que moverse.
+

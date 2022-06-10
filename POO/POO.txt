@@ -1,0 +1,112 @@
+Paradigmas de Programación: 
+Un paradigma de programación es un conjunto de ideas que describe una forma de entender la construcción de programas. 
+Estas ideas nos permiten pensar y estructurar el código de distintas formas. Ninguna forma es mejor que otra, si no que son útiles 
+o no para una circunstancia dada o para resolver un problema dado. Existen lenguajes que se concentran en las ideas de un único 
+paradigma así como hay otros que permiten la combinación de ideas provenientes de distintos paradigmas.
+
+
+Programación Orientada a Objetos: 
+En particular el paradigma de Programación Orientada a Objetos (POO) es un estilo o una forma de pensar los programas en la cual se 
+estructura un programa construyendo piezas simples y reutilizables de código para crear instancias individuales de objetos. 
+Un programa basado en este paradigma es un conjunto de objetos que interactúan entre sí en un ambiente mandándose mensajes para lograr 
+un objetivo determinado.
+Poo → OBJETOS --> entidad computacional: 
+                    ⇒ pedazo de código al que le mando mensajes y da una respuesta 
+                    ⇒ es una entidad computacional que entiende mensajes y tiene ATRIBUTOS. 
+                    ⇒ Son INSTANCIAS de una clase: es la creación concreta de una cosa abstracta. 
+    → En poo, el código está compuesto por objetos que se comunican entre sí. 
+
+
+OBJETOS
+Un objeto es un ente computacional con el que podemos comunicarnos mediante mensajes y puede (o no) tener un estado interno 
+(referencias a otros objetos).
+Cuando los objetos hacen o pueden hacer algo, en principio, no tienen porqué responder. Cuando el objeto hace o conoce la operación que le pedimos nos tira error (atribute error).
+ --> ATRIBUTOS = Lo que los objetos saben/pueden hacer  
+ --> MENSAJES =  → Para pasarle mensajes a los objetos: .mensaje()  
+                 → un mensaje es un METODO --> (“”función”” que pertenece a un objeto -  la descripción de qué hacer cuando se recibe un mensaje del mismo nombre). 
+                                           --> Un método está dentro de una clase, una función puede trabajar por fuera también. Los métodos 
+                                                siempre tienen como primer argumento un self (=representa a un objeto dado). 
+                 → No todos los objetos tienen que reaccionar de igual forma a los mismos mensajes. En otras palabras, no todos los 
+                    objetos tienen por qué comportarse igual.
+                 → Si le paso un mensaje sin paréntesis, le estoy pidiendo un ESTADO --> Los objetos tienen/pueden tener (uno o varios) estados. 
+                                                                                     --> Los estados son variables/pueden fluctuar de acuerdo con lo que le pase al objeto. 
+                                                                                     --> Lo que pasa cuando cambia el estado se llama comportamiento de los objetos. 
+                                                                                     --> ESTADO = conjunto de atributos (arquitectura ⇒ estático). Estado dinámico de los objetos que contempla los valores. 
+ --> CLASE: 
+        → nos da una idea de lo que puede hacer un objeto de esa clase. 
+        → Dos objetos distintos son INSTANCIAS distintas de una clase. 
+        → Al acto de crear un objeto a partir de una clase (“molde”) se lo denomina INSTANCIACION, y por tanto a los objetos también se los denomina INSTANCIAS (de una clase particular). 
+                Instanciación:
+	                Nombre_variable = clase(estado_inicial)
+                Para crear una clase:
+ 	                class Nombre_clase :
+		                def __init__(self, estado):
+			            self.estado = estado
+
+		                def atributo(self, variable_a_introducir_del_atributo):
+			                defino lo que quiero que haga
+        → Los objetos tienen IDENTIDAD. Para comparar la identidad de dos objetos, puedo igualarlos (ob1 == ob2). 
+        → Al formar parte de la misma clase, se espera que los objetos puedan hacer lo mismo, y entiendan los mismos mensajes. Lo compruebo pidiéndole a los dos objetos lo mismo. 
+        → Puede haber una clase madre, que generalicen y engloben a otras SUBCLASES: --> HERENCIA: todos los atributos que tiene la clase madre, son heredados por las subclases. 
+ --> INTERFAZ = conjunto de mensajes que puede entender. 
+        --> POLIMORFISMO: → compartir interfaces. 
+                          → Para poder definir polimorfismo, debe haber alguien (otro objeto) observando para saber si lo hay. 
+                          → capacidad de un objeto de poder enviarle el mismo mensaje indistintamente a objetos de distintas clases. 
+                          → Es necesaria la presencia de al menos tres objetos: uno que envíe el mensaje y dos de clases distintas que puedan entenderlo. 
+                          → TIENEN QUE TENER LOS MISMOS ATRIBUTOS EN LA MISMA INTERFACE, si no no es polimorfismo. 
+ --> AMBIENTE = → contexto en el que vive el objeto. (por ejemplo, el código de un archivo). 
+                → Dentro del mismo ambiente pueden convivir distintos objetos. 
+
+________________________________________________________________________________________________________________________________________________________________________________________________
+
+Otros datos y ejemplos:
+solo tienen self como parámetro cuando sus atributos siempre se inicializan con el mismo valor. Ej:
+    class Pizza:
+        def __init__(self):
+            self.condimento = "adobo"
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Si una clase no toma atributos, no se declara el __init__
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GETTER = método con el objetivo de que los objetos se expongan. Me permite acceder a los estados de un objeto
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Las listas, diccionarios, strings, booleanos y números son objetos
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DIFERENCA FUNCION / PROCEDIMIENTO: 
+las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Return + == → es equivalente a un if que devuelve un booleano
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Atributo sin ()
+Metodo con ()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Condición para un objeto:
+“Un zombie es un peligro si tiene más de 50 de hambre”
+  def es_un_peligro(self):
+    return self.hambre > 50
+
+  def sin_carga(self):
+    return self.tiene_bateria() is False
+
+  def maximo_personas(self):
+    return 20
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUPER()
+si una subclase define el mismo método que se encuentra en la superclase, va a evaluar ese código en lugar del de su superclase. 
+    → Al utilizar super() en el método de una subclase, se evalúa el método con el mismo nombre de su superclase. Por ejemplo:
+class Saludo:
+  def saludar(self):
+    return "Buen día"
+
+class SaludoDocente(Saludo):
+  def saludar(self):
+    return super().saludar() + " estudiantes"
+
+De esta forma, al enviar el mensaje saludar a SaludoDocente, super invoca el método saludar de su superclase, Saludo. 
+    Super ⇒ evitar repetir la lógica de lo que ya está escrito en la superclase.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clase ASBSTRACTA = a diferencia de las CONCRETAS, nunca las instanciamos; es decir, no creamos objetos con esa clase, 
+solo nos sirven para proveer comportamiento a sus subclases.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SI NO LLEGO A COMPLETAR EL METODO
+def metodo():
+  pass 

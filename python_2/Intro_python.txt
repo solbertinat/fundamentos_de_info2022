@@ -1,0 +1,102 @@
+Ctrl J = abre terminal 
+Prompt s: > $
+
+TIPO DE DATOS
+Int = números enteros ; Float = números decimales → separados por punto
+	→ Mod o % → te da el sobrante (resto) de la división entera de un número entre otro
+    → Operadores matemáticos:
+                - suma +
+                - resta -
+                - división / 
+                - redondear division al entero //
+                - multiplicacion *
+                - exponencial **
+                - += suma las vaiables que le indique y asigna el resultado a la primer variable
+    → Operadores relacionales:
+                - igualdad ==
+                - distinto de !=
+                - Mayor >
+                - Menor <
+    → int(string) → convierte a un string a número
+--------------------------------------------------------------------------------------------------------------------
+Booleanos = datos lógicos (True, False)
+---------------------------------------------------------------------------------------------------------------------
+String = texto, cadena de caracteres. Entre comillas simples o dobles
+	→ Obtener caracteres de una variable:
+		Nombre_variable[caracter_inicial:caracter_final]
+    → Manipular cadenas:
+		len(str)
+        str.upper()
+        str.lower()
+        str.count('caracter') → devuelve el n° de ocurrencias del caracter en el string
+        str.replace(‘caracter’ , ‘caracter’)
+        str.capitalize() → pone en mayúscula la primer letra del string
+        str.startswith(‘...’) → devuelve un booleano
+        str.endswith(‘...’) 
+        str.split(‘donde_lo_quiero_separar’) → me devuelve una lista
+        str.find(‘caracter’) → me devuelve la posición de ese caracter // o str.index(‘caracter’)
+        str.isnumeric()
+        Str.isalpha
+        Str[posición]
+        print(f “my name is {variable}”) → f para que entienda que dentro del str hay una variable
+    → in = para saber si un string contiene a otro
+---------------------------------------------------------------------------------------------------------------------
+List(a)  = permiten manipular un gran número de datos en forma sencilla. Sus elementos pueden ser cadenas, números u otras listas (cualquier tipo de dato). lista = [2,5,4] 
+    → Son mutables
+    → para obtener el primer elemento de la lista: lista[0]
+	→ .append (‘’) → para agregar un elemento
+    → .extend([]) si quiero agregar más de un elemento
+    → .insert(posición, elemento) → para indicarle dónde lo quiero agregar
+	→ para sacar un elemento: lista.remove('25')
+	→ .pop() → para sacar el último elemento
+	→ .clear() → para vaciar la lista
+	→ .index(‘elemento’) devuelve el índice del elemento en la lista.
+	→ list(range(1, 10)) → creo una lista que va de 1 a 9
+	→ ‘....’ in list → para saber si … esta en la lista
+	→ .sort() → para ordenar alfabeticamente // .sort(reverse=True) → al reves
+	→ .count(‘elemento’) → para saber cuántas veces está el elemento en la lista
+---------------------------------------------------------------------------------------------------------------------
+Diccionarios
+	→ no tienen orden (no index), sino llaves
+	→ declarar un diccionario vacío: >>> diccionario = {}
+                                     >>> diccionario = dict()
+	→ con valor: diccionario = {"llave": "valor"}
+	→ acceder a todas las llaves: diccionario.keys()
+
+
+VARIABLES
+Nombre simbólico para un valor
+Sintaxis variable: >>> variable = valor de la variable
+
+
+FUNCIONES
+def funcion(argumento):
+    Operación sobre el argumento
+    return aquí va el resultado quiero devolver
+
+
+CONDICIONALES
+---------------------------------------------------------------------------------------------------------------------
+If (condicion):
+	Que hacer si es cierto
+
+If (condicion):
+	Que hacer si es cierto
+elif:   --> no se evaluan todas las condiciones
+Otra indicación
+else:
+	Que hacer si es falso
+
+---------------------------------------------------------------------------------------------------------------------
+for variable_cambiante in lista:
+	Que hacer
+
+---------------------------------------------------------------------------------------------------------------------
+while condicion:
+	Qué hacer
+	Condición = condición + 1
+
+
+Input() → para ingresar datos por la terminal. AKA “ingresar por teclado”
+
+

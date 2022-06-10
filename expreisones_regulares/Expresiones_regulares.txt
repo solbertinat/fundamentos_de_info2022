@@ -1,0 +1,97 @@
+EXPRESION REGULAR
+Forma en la que puedo representar un conjunto de caracteres. Son cadenas de caracteres basadas en reglas sintácticas, 
+que permiten describir secuencias de caracteres. Es decir es un criterio para buscar, capturar o reemplazar texto utilizando 
+patrones. Se pueden concatenar para formar nuevas expresiones regulares; si, por ejemplo, A y B son expresiones regulares, 
+AB también es una expresión regular.
+Sirve para buscar patrones de texto o caracteres en general
+
+
+METACARACTERES
+Son caracteres especiales que, dependiendo del contexto, tienen un significado especial para las expresiones regulares.
+Secuencias de escape: _____________________________________________________________________________________________________________________
+    - \n = salto de linea
+    - \t = tab o cambio de pestaña
+    - \s = espacio
+    - '  = comillas simples
+    - "  = comillas dobles
+    - \  = escape, viene antes del caracter especial. No se usa para comillas
+
+Metacaracteres delimitadores:  _____________________________________________________________________________________________________________________
+Permitirán delimitar dónde queremos buscar los patrones de búsqueda
+    - ^ = inicio de linea
+    - $ = fin de linea
+    - \A = inicio de texto
+    - \Z = fin de texto
+    - .  = coincide con cualquier caracter en una linea dada
+
+Metacaracteres cuantificadores: _____________________________________________________________________________________________________________________
+Permiten repetir cierta cantidad de veces una búsqueda dada. 
+    - * = cero o mas: todas las ocurrencias de un dado substring
+    - + = una o mas ocurrencias del patron 
+    - ? = cero o una
+    - {n} = exactamente n veces
+    - {n,m} = por lo menos n, no más de m. --> {n,} = minimo n
+
+Metacaracteres predefinidos: _____________________________________________________________________________________________________________________
+    - \w = caracter alfanumerico
+    - \W = caracter NO alfanumerico
+    - \d = caracter numerico
+    - \D = caracter NO numerico
+    - \s = espacio de cualquier tipo
+    - \S = cualquier caracter que no sea un espacio
+    
+(.*?) = para toda una parte que tenga números, letras y símbolos
+[] = RANGO. todas las apariciones de lo que está dentro del corchete por separado → ej: [98] = 9, 8. 
+[^ ] = todo lo que NO esta en el corchete
+() = agrupar, Buscar el substr literal
+\. = .  --> lo mismo para * --> \ es un escape
+
+Rangos _____________________________________________________________________________________________________________________
+Un rango es una clase de caracteres abreviada que se crea escribiendo el primer caracter del rango, un guión y el 
+último caracter del rango. Sirve para listar un conjunto de caracteres de interés, de este modo se encontrará uno 
+cualquiera de los caracteres de la lista.
+Ej: [a-d] == [abcd]
+También podemos listar caracteres que no deben aparecer utilizando el ^. Ej: [^a-d] == cualquier caracter que no sea abcd.
+
+
+RE EN PYTHON
+libreria RE --> import re 
+
+Coincidencias o matches:
+import re
+texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+patron = "amet"
+    - re.match()
+        print(re.match (patron, texto))	
+        --> busca en la primer palabra
+    - Búsqueda por caracter
+        print(texto[22:26])	
+        --> me devuelve la palabra ya que estoy dándole los caracteres 
+    - re.search()
+        print(re.search(patron, texto))
+        --> me devuelve dónde encontró al patron. Recupera el 
+            objeto pero no el texto en sí. Busca en todo el texto
+        → .group()
+            print(re.search(patron, texto).group())
+            hace que me devuelva el texto. Dentro del paréntesis le pongo el número 
+            de la cantidad de veces que quiero que encuentre la palabra.
+        → .group() para patrones
+	        patron = "ipsum(.*)sit" --> me va a devolver lo que está entre esas
+						    	        palabras, lo mismo con 0. Si le pongo 1, ya las 
+						                palabras que le puse no me las devuelve, solo lo del
+						                medio. Prioriza la primer aparición del delimitador.
+            patron = "ipsum(.*?)sit"--> Prioriza los matches internos del delimitador (final).
+    - re.findall()
+        print(re.findall(patron, texto)) --> me va a devolver una lista con todas las 
+							                 apariciones de lo que le pedí.
+        patron = "ipsum(.*?)sit" 
+        re.findall(patron, texto) --> devuelve en una lista la parte que se encuentra 
+                                      dentro de los delimitadores.
+    - re.sub()
+        re.sub(patron, “lo que quiero que ponga”, texto) 
+        reemplaza el patron por lo que le indico
+
+
+
+
+

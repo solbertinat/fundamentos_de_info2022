@@ -1,0 +1,70 @@
+Los sistemas de control de versiones comienzan con una versión base del documento y luego registran los cambios que realiza 
+en cada paso del camino. Se podría pensar como un video: puede retroceder para comenzar en el documento inicial y reproducir 
+cada estado o cambio que realizó, llegando finalmente a su versión más reciente.
+
+
+Sistema de control de versiones: 
+- Es una herramienta que realiza un seguimiento de los cambios de un documento o directorio de forma automática, creando 
+    efectivamente diferentes versiones de nuestros archivos. 
+- Cada registro de estos cambios se denomina commit y mantiene metadatos útiles sobre ellos. 
+- El historial completo de commits para un proyecto en particular y sus metadatos forman un repositorio.
+- Siguiendo con la analogía del video, podemos pensar cada commit como un fotograma en nuestro video, siendo este el historial 
+    completo de cambios de un archivo o directorio. 
+- Cada commit funciona como un “paquete” de cambios realizados, que se pueden ir agregando al stage (estado intermedio con cambios) 
+    mediante el comando git add. Me va a diferenciar (en color) lo que es nuevo de lo que ya estaba en el documento. 
+- Estos cambios se gestionan como una unidad, al generar un commit, y quedan registrados en una “foto” al hacer git commit. 
+- Es muy importante especificar los cambios realizados en cada commit, esto nos ayudará a rastrear cualquier cambio al querer volver atrás. 
+- Al hacer commit se obtiene un ID del mismo, que luego puede usarse en otros comandos para referenciar este bloque de cambios. 
+- Orden: add → add → … →  commit → se guardan los cambios, “vuelve” a cero (con las nuevas modificaciones como parte del documento)
+
+
+Dónde:
+Git trabaja con un repositorio (app web donde subimos info -almacenamiento al que se accede en línea, a través de internet- y queda almacenada) 
+local que está en tu computadora, donde vas a ir agregando tus commits y uno remoto (en la nube) en el cual podes subir tus commits, 
+compartirlos con alguien más o bajarte los commits que haya subido alguien. 
+Podemos hacer una sincronización saliente del repo local al remoto (origin), haciendo git push. Lo “empujo” a la nube = subir a github. 
+Este comando envía los commits generados localmente que no se hayan enviado anteriormente. Podemos también descargar los cambios del 
+repositorio remoto utilizando el comando git pull. 
+
+
+Cómo trabajar:
+Necesitaremos un repositorio local y uno remoto. Desde el local haremos cambios, que luego vamos a agregar al repositorio remoto. 
+La primera vez que usas GIT vas a tener que configurar tu nombre completo y tu email con los siguientes comandos: 
+    - git config --global user.name "TU NOMBRE" 
+    - git config --global user.email "TU DIRECCIÓN DE EMAIL" 
+Una vez creada la cuenta y un repositorio en alguno de estos servicios, tenés que bajarte la información del repositorio remoto a tu computadora
+
+
+Conflictos
+Suele suceder cuando trabajamos en equipo o desde más de una computadora sobre el mismo proyecto, que se sobreescriba o modifique una misma 
+porción de código dentro de un archivo. En general sucede cuando hemos introducido cambios (commits) localmente que sobrescriben los cambios 
+que se encuentran remotos y git no sabe qué versión es la correcta. Estos conflictos pueden ser solucionados o tomando la versión remota o 
+bien generando un nuevo commit de forma local y subiéndolos al repositorio remoto.
+
+
+Sistema de ramas/branches
+Nos permite desarrollar en paralelo diferentes funcionalidades (cada una en un branch distinto), sin mezclar el código, hasta tener una 
+versión final y estable. Luego, cuando se pretenden integrar los cambios de cada branch para obtener un producto más completo, se fusionan 
+mediante un merge.
+Podemos movernos entre las diferentes ramas de nuestro proyecto mediante la sentencia git checkout <nombreBranch> , 
+de este modo podemos trabajar en cambios que tienen como base el commit al que hace referencia dicho branch 
+Además con el parámetro -b puede crearse un nuevo branch antes de moverse al mismo. Por ejemplo, para crear el branch dev y comenzar a 
+trabajar en el mismo, debemos hacer: git checkout -b dev.
+Y podemos corroborar en qué rama nos encontramos haciendo: git branch - -show-current
+
+
+CLONAR =similar= pull   → pull hace solo lo nuevo
+		 	→ al clonar estamos clonando TODO
+    ⇒ file → clone → url
+
+CLONAR REPO EN VISUAL
+    1. Abrir terminal git bash
+    2. ulichtenbaum@ING-T480-07 MINGW64 ~/Documents/Fundamentos_de_informatica
+        $ git clone https://github.com/solbertinat/fundamentos_de_info2022.git
+LUEGO ENTRO EN EL REPO
+    3. cd fundamentos_de_info2022
+PARA SUBIR UN ARCHIVO
+    4. Muevo los archivos a la carpeta del repositorio
+    5. git add *
+    6. git commit -m “escribir_algo”
+    7. git push
