@@ -69,22 +69,28 @@ print(pd.DataFrame([dict1]))"""
 
 # Muestra:
 
-# datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
+"""datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
 
-# labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
 
+import pandas as pd
 
+DF = pd.DataFrame(datos_ejemplo, labels)
+print(DF)"""
 
 # Ejercicio 6
 # Escribí un programa que muestre un resumen de la información básica de un DataFrame y sus datos.
 
 # Muestra:
 
-# datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
+"""datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
 
-# labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
 
+import pandas as pd
 
+DF = pd.DataFrame(datos_ejemplo, labels)
+DF.info()"""
 
 
 # Ejercicio 7
@@ -96,13 +102,22 @@ print(pd.DataFrame([dict1]))"""
 
 # labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
 
+datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
 
+labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+
+import pandas as pd
+
+DF = pd.DataFrame(datos_ejemplo, labels)
+"""print(DF.head(3))"""
 
 # Ejercicio 8
 # Realizá un programa que seleccione e impirma las columnas "nombre" y "puntaje" del DataFrama anterior.
 
-
+"""print(DF[["nombre", "puntaje"]])"""
 
 
 # Ejercicio 9
-# Escribí un programa que dado el DataFrame anterior imprima los nombres en mayúscula y la longitud de los mismos en una nueva tabla.
+# Escribí un programa que dado el DataFrame anterior imprima los nombres en mayúscula y la longitud de los mismos en 
+# una nueva tabla.
+
