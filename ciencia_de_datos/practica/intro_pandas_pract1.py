@@ -1,10 +1,11 @@
+import pandas as pd
+
 # Ejercicio 1
 # Escribí un programa que sume, reste, multiplique y divida dos series de números de Pandas.
 # Series de muestra: 
 # [3, 7, 12, 15, 21], [1, 4, 10, 14, 19]
 
-"""import pandas as pd 
-
+"""
 s1 = pd.Series([3, 7, 12, 15, 21], dtype= int)
 s2 = pd.Series([1, 4, 10, 14, 19], dtype= int)
 
@@ -25,8 +26,7 @@ print(division)"""
 # Series de muestra:
 # [3, 7, 9, 14, 25], [1, 7, 10, 16, 19]
 
-"""import pandas as pd
-
+"""
 serie1 = pd.Series([3, 7, 9, 14, 25], dtype= int)
 serie2 = pd.Series([1, 7, 10, 16, 19], dtype= int)
 
@@ -43,8 +43,6 @@ print(iguales)"""
 # Escribí un programa para convertir un diccionario a una serie de Pandas.
 # Diccionario de muestra:
 """dict1 = {"a": 10, "b": 20, "c": 30, "d": 40, "e": 50}
-
-import pandas as pd
 
 print(pd.DataFrame([dict1]))"""
 
@@ -73,8 +71,6 @@ print(pd.DataFrame([dict1]))"""
 
 labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
 
-import pandas as pd
-
 DF = pd.DataFrame(datos_ejemplo, labels)
 print(DF)"""
 
@@ -86,8 +82,6 @@ print(DF)"""
 """datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "Miguel", "Mateo", "Laura", "Jorge", "Lucas"], "puntaje": [12.5, 9, 16.5, 13, 9, 20, 14.5, 10, 8, 19], "intentos": [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], "califica": [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]}
 
 labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-
-import pandas as pd
 
 DF = pd.DataFrame(datos_ejemplo, labels)
 DF.info()"""
@@ -106,8 +100,6 @@ datos_ejemplo = {"nombre": ["Agustina", "Diana", "Karen", "Julián", "Emilio", "
 
 labels = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
 
-import pandas as pd
-
 DF = pd.DataFrame(datos_ejemplo, labels)
 """print(DF.head(3))"""
 
@@ -120,4 +112,25 @@ DF = pd.DataFrame(datos_ejemplo, labels)
 # Ejercicio 9
 # Escribí un programa que dado el DataFrame anterior imprima los nombres en mayúscula y la longitud de los mismos en 
 # una nueva tabla.
+"""
+def crear_tabla():
+    list_nombres = []
+    contador = 0
+    for name in DF["nombre"]:
+        list_nombres.append(name.upper())
+        contador +=1
+
+    list_long = []
+    contador2 = 0
+    for name in DF["nombre"]:
+        list_long.append(len(name))
+        contador2 +=1
+
+    tabla = pd.DataFrame(list_nombres, list_long)
+    print(tabla)
+
+crear_tabla()
+
+"""
+
 

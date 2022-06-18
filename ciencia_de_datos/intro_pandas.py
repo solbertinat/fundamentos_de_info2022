@@ -88,7 +88,7 @@ personas = pd.read_csv(r"C:\Users\ulichtenbaum\Downloads\personas_2011.csv", sep
 # ingresaron 2098 personas.
 
 # Desafio VI: Descargala en formato csv y cargala en un nuevo DataFrame de nombre categorias  
-categorias = pd.read_csv(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\ciencia_de_datos\ref_categoria_conicet.csv", sep=";")
+# categorias = pd.read_csv(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_informatica\fundamentos_de_info2022\ciencia_de_datos\ref_categoria_conicet.csv", sep=";")
 
 # Desafío VII: Identificá si existen columnas en común con el DataFrame grande
 # print(categorias.info())
@@ -101,5 +101,5 @@ categorias = pd.read_csv(r"C:\Users\ulichtenbaum\Documents\Fundamentos_de_inform
 # pd.concat([categoria_a, categoria_b])
 # me devuelve los seniority level A y despues los B
 
-personas_cat = pd.merge(personas, categorias, on='categoria_conicet_id')
+#personas_cat = pd.merge(personas, categorias, on='categoria_conicet_id')
 
