@@ -128,7 +128,3 @@ que si se aclara el numero de pedido o venta, devuelve unicamente los datos corr
 # UNQ: si
 # UCEMA: si
 
-# Desafío XVII: si no se organizan de forma REST, ¿cómo se organizan sus rutas?
-""" preguntar """
-
-# Desafío XVIII: ¿En dónde está desplegado QMP? ¿Podés averiguarlo las cabeceras HTTP y/o la URL?
