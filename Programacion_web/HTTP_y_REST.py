@@ -102,9 +102,8 @@ que si se aclara el numero de pedido o venta, devuelve unicamente los datos corr
 """ Devuelve 201 """
 
 # Desafío XIII: Nos quedaron prendas con ids que no nos sirven; ¡borralas!
-# requests.delete('https://macowins-server.herokuapp.com/?id=21')
-# print(requests.get('https://macowins-server.herokuapp.com/prendas').json())
-"""chequear"""
+requests.delete('https://macowins-server.herokuapp.com/prendas/2')
+print(requests.get('https://macowins-server.herokuapp.com/prendas').json())
 
 # Desafío XIV: Creá una venta.
 # headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
